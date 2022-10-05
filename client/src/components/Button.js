@@ -1,4 +1,4 @@
-const Button = () => {
+const Button = ({ btnType }) => {
 
     return (
         <div>Button</div>
