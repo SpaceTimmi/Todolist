@@ -1,8 +1,8 @@
-const Input = ({ type, legend }) => {
+const Input = ({ type, labelText }) => {
     return (
         <div className="input-container">
-            <p className="input-legend">{legend}</p>
-            <input type={type} name={legend.toLowerCase()} maxLenght="20"/>
+            <label className="input-legend">{labelText}</label>
+            <input className="" type={type} name={labelText.toLowerCase()}/>
         </div>
     )
 }

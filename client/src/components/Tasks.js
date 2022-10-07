@@ -29,9 +29,9 @@ const Tasks = () => {
         <div className="tasks-container">
             <p className="task-legend">Todolist</p>
             <div className="tasks-sub-container">
-                {tasks.map((singleTask, i) => {
+                {tasks.map((singleTask, i) => (
                     <Task singleTask={singleTask} key={i} /> 
-                })}
+                ))}
             </div>
         </div>
     )
