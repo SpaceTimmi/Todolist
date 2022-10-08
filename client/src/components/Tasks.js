@@ -27,7 +27,6 @@ const Tasks = () => {
 
     return (
         <div className="tasks-container">
-            <p className="task-legend">Todolist</p>
             <div className="tasks-sub-container">
                 {tasks.map((singleTask, i) => (
                     <Task singleTask={singleTask} key={i} /> 
