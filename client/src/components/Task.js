@@ -1,21 +1,22 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPenToSquare } from '@fortawesome/free-solid-svg-icons';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import { useState } from 'react';
 
 
 
 
 const Task = ({ singleTask }) => {
+    const [completed, setComplete] = useState(singleTask.completed)
 
     const isCompleted = () => {
         // marks a task as completed
+        setComplete(!completed);
     }
-
-
 
     return (
         <div className="task-container">
-            <div className="singleTask">
+            <div className="singleTask" id={completed ? 's-completed' : 's-pending'}>
                 <div className='edit-n-delete'>
                     <FontAwesomeIcon className='edit-btn' icon={faPenToSquare} size="lg" />
                     <FontAwesomeIcon className='del-btn' icon={faTrash} size="lg" />
@@ -27,15 +28,14 @@ const Task = ({ singleTask }) => {
                     Time: {singleTask.time}
                 </div>
                 <div className="taskStatus">
-                    {singleTask.completed ?
-                     <div>
-                        Pending
-                        <input onClick={() => isCompleted()} type="radio"></input>
-                     </div> :
-                     <div>  
-                        Completed
-                        <input onClick={() => isCompleted()} type="radio" checked></input>
-                     </div>}
+                    <div className="status-container">
+                        {completed ? 'Completed' : 'Pending' }
+                        <input type='radio' 
+                        onClick={() => isCompleted()}
+                        className='status-input' 
+                        checked={completed}>
+                        </input>
+                    </div>
                 </div>
                 <div className="description">
                     {singleTask.description}

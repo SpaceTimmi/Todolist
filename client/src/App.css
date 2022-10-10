@@ -83,6 +83,14 @@ BODY
   border-radius: 5px;
 }
 
+
+.taskName, .taskTime, .taskStatus {
+  text-transform: capitalize;
+  font-style: italic;
+  font-size: small;
+  font-weight: 500;
+}
+/*
 .taskName, .taskTime, .taskStatus {
   text-transform: capitalize;
   text-align: right;
@@ -91,12 +99,19 @@ BODY
   font-weight: 500;
 }
 
-
-/*
 .taskTime {
   text-align: right;
   font-style: italic;
-} */
+} 
+
+
+.description {
+  font-size: 15px;
+  font-weight: 700;
+  text-align: left;
+  margin-top: -20px;
+}
+*/
 
 .task-container {
   display: flex;
@@ -104,11 +119,10 @@ BODY
   align-items: center;
 }
 
+
 .description {
   font-size: 15px;
   font-weight: 700;
-  text-align: left;
-  margin-top: -20px;
 }
 
 .edit-btn {
@@ -133,6 +147,9 @@ BODY
 }
 
 
+.status-input:hover {
+  cursor: pointer;
+}
 
 
 /* Form */
@@ -145,6 +162,14 @@ BODY
   background-color: red;
   width: 600px;
   height: 400px;
+}
+
+#s-pending {
+  background-color: lightcoral;
+}
+
+#s-completed {
+  background-color: lightgreen;
 }
 
 
