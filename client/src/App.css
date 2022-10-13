@@ -70,6 +70,10 @@ BODY
   background-color: black;
 }
 
+.btn:hover {
+  cursor: pointer;
+}
+
 
 /* tasks */
 .singleTask {
@@ -152,24 +156,63 @@ BODY
 }
 
 
-/* Form */
-.form-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 40px;
-}
-.form-sub-container {
-  background-color: red;
-  width: 600px;
-  height: 400px;
-}
-
 #s-pending {
   background-color: lightcoral;
 }
 
 #s-completed {
   background-color: lightgreen;
+}
+
+
+
+/* Form */
+.add-form {
+  margin-top: 40px;
+}
+.form-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+.form-sub-container {
+  background-color: lightgreen;
+  width: 500px;
+  height: 400px;
+  border: 1px solid green;
+  border-radius: 14px;
+}
+.input-tag-form {
+  padding: 5px;
+  width: 400px;
+}
+
+legend {
+  text-transform: capitalize;
+  font-weight: 600;
+  font-style: italic;
+  margin-bottom: 0;
+}
+
+.input-tg {
+  width: 400px;
+  height: 30px;
+}
+
+.description-tg {
+  height: 150px;
+}
+
+@media screen and (max-width:1000px) {
+  .form-sub-container {
+    width: 100%;
+  }
+
+  .input-tg {
+    width: 90%;
+  }
+  
+  
 }
 
 

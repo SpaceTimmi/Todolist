@@ -33,7 +33,7 @@ const Task = ({ singleTask }) => {
                         <input type='radio' 
                         onClick={() => isCompleted()}
                         className='status-input' 
-                        checked={completed}>
+                        defaultChecked={completed}>
                         </input>
                     </div>
                 </div>
